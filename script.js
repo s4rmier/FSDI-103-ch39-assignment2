@@ -53,6 +53,6 @@ let updateDOM = () => {
   grandTotal.textContent = total;
 
   console.log(
-    `${prodQty} pcs of ${prodName} at $${prodPrice} each has total cost of $${grandTotal}`
+    `${prodQty.textContent} pcs of ${prodName.textContent} at $${prodPrice.textContent} each has total cost of $${grandTotal.textContent}`
   );
 };
