@@ -47,10 +47,12 @@ let updateDOM = () => {
   let price = parseFloat(prodPrice.textContent);
   let qty = parseFloat(prodQty.textContent);
   subTotal.textContent = price * qty;
-
   let taxes = parseFloat(subTotal.textContent) * 0.075;
   salesTax.textContent = taxes;
-
   let total = parseFloat(subTotal.textContent) * 1.075;
   grandTotal.textContent = total;
+
+  console.log(
+    `${prodQty} pcs of ${prodName} at $${prodPrice} each has total cost of $${grandTotal}`
+  );
 };
