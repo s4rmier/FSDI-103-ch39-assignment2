@@ -44,12 +44,12 @@ let validateUserInput = (input) => {
 
 // update the DOM elements if the previous function executions are valid
 let updateDOM = () => {
-  let price = parseFloat(prodPrice.textContent);
-  let qty = parseFloat(prodQty.textContent);
+  let price = Number(prodPrice.textContent);
+  let qty = Number(prodQty.textContent);
   subTotal.textContent = price * qty;
-  let taxes = parseFloat(subTotal.textContent) * 0.075;
+  let taxes = Number(subTotal.textContent) * 0.075;
   salesTax.textContent = taxes;
-  let total = parseFloat(subTotal.textContent) * 1.075;
+  let total = Number(subTotal.textContent) * 1.075;
   grandTotal.textContent = total;
 
   console.log(
